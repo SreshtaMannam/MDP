@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Jan 30 14:33:11 2024
 
-@author: Satwika
-"""
 
 import pickle
 import streamlit as st
