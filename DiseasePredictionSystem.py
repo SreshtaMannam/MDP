@@ -15,7 +15,7 @@ heart_disease_model = pickle.load(open('heart_disease_model.sav', 'rb'))
 
 parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
 
-kidney_disease_model = pickle.load(open('kidney_model.sav', 'rb'))
+kidney_model = pickle.load(open('kidney_model.sav', 'rb'))
 
 
 #sidebar for navigation
@@ -276,7 +276,7 @@ if select == 'Kidney Disease Prediction':
     
     #button for prediction
     if st.button('Kidney Disease Test Result'):
-        kidney_prediction = kidney_disease_model.predict([[age, bp, sg, al, su, rbc, pc, pcc, ba, bgr, bu, sc, sod, pot, hemo, pcv, wc, rc, htn, dm, cad, appet, pe, ane]])
+        kidney_prediction = kidney_model.predict([[age, bp, sg, al, su, rbc, pc, pcc, ba, bgr, bu, sc, sod, pot, hemo, pcv, wc, rc, htn, dm, cad, appet, pe, ane]])
         
         if kidney_prediction[0]==0:
             kidney_diagnosis = 'The person does Not Have Kidney Disease'
