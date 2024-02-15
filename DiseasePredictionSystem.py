@@ -7,13 +7,6 @@ from streamlit_option_menu import option_menu
 
 from PIL import Image
 
-icon = Image.open('page_icon.png')
-st.set_page_config(
-        page_title="Multiple Disease Prediction",
-        page_icon=icon,
-        layout="wide"
-)
-
 
 #loading the saved models
 diabetes_model = pickle.load(open('diabetes_model.sav', 'rb'))
