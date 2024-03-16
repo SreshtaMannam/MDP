@@ -79,7 +79,7 @@ if (selected == 'Diabetes Prediction'):
 
 
 #Heart Disease prediction page
-if select == 'Heart Disease Prediction':
+if selected == 'Heart Disease Prediction':
     #page title
     st.title('Heart Disease Prediction')
     
