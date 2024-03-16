@@ -121,8 +121,11 @@ elif select == 'Parkinsons Disease Prediction':
     pass
 
 
+set_bg_from_url("https://images.everydayhealth.com/homepage/health-topics-2.jpg?w=768", opacity=0.875)
 
-    
+
+
+
     
     
     
