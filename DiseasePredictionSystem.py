@@ -273,7 +273,7 @@ def set_bg_from_url(url, opacity=1):
     )
 
 # Set background image from URL
-set_bg_from_url("https://wallpapercave.com/wp/wp6938553.jpg?w=768", opacity=0.875)
+set_bg_from_url("https://media.consumeraffairs.com/files/news/Digital_health_care_concept_Jackie_Niam_Getty_Images.jpg?w=768", opacity=0.875)
     
     
     
