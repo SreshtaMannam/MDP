@@ -273,7 +273,7 @@ def set_bg_from_url(url, opacity=1):
     )
 
 # Set background image from URL
-set_bg_from_url("https://tse1.mm.bing.net/th?id=OIP.S_cp9np_kjlzWUIfyZ3XQQHaEM&pid=Api&P=0&h=220.jpg?w=768", opacity=0.875)
+set_bg_from_url("https://wallpaperaccess.com/full/749802.jpg?w=768", opacity=0.875)
     
     
     
