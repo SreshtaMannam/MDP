@@ -70,16 +70,23 @@ if (selected == 'Diabetes Prediction'):
     
     # creating a button for Prediction
     
-    if st.button('Diabetes Test Result'):
-        diab_prediction = diabetes_model.predict([[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]])
-        
-        if (diab_prediction[0] == 1):
-          diab_diagnosis = 'The person is diabetic'
-        else:
-          diab_diagnosis = 'The person is not diabetic'
-        
-    st.success(diab_diagnosis)
+    # button
+    if st.button("Diabetes test result"):
+        diabetes_prediction=[[]]
+        diabetes_prediction = diabetes_model.predict(
+            [[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreefunction, Age]])
 
+        # after the prediction is done if the value in the list at index is 0 is 1 then the person is diabetic
+        if diabetes_prediction[0] == 1:
+            diabetes_dig = "we are really sorry to say but it seems like you are Diabetic."
+            image = Image.open('positive.jpg')
+            st.image(image, caption='')
+        else:
+            diabetes_dig = 'Congratulation,You are not diabetic'
+            image = Image.open('negative.jpg')
+            st.image(image, caption='')
+        st.success(name+' , ' + diabetes_dig)
+        
 
 # Heart Disease Prediction Page
 if selected == 'Heart Disease Prediction':
