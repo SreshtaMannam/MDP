@@ -2,6 +2,20 @@ import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
 
+def set_bg_from_url(url, opacity=1):
+    # Set background image using HTML and CSS
+    st.markdown(
+        f"""
+        <style>
+            body {{
+                background: url('{https://intersectiq.com/assets/images/blogs/6/cover.jpg}') no-repeat center center fixed;
+                background-size: cover;
+                opacity: {opacity};
+            }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
 # loading the saved models
 
@@ -18,16 +32,24 @@ with st.sidebar:
     
     selected = option_menu('Multiple Disease Prediction System',
                           
-                          ['Diabetes Prediction',
+                          ['Home','Diabetes Prediction',
                            'Heart Disease Prediction',
                            'Parkinsons Prediction'],
-                          icons=['activity','heart','person'],
+                          icons=['home','activity','heart','person'],
                           default_index=0)
     
-st.title("Multiple Disease Prediction System")
+# Set background image for home page
+if selected == 'Home':
+    set_bg_from_url("https://your-home-page-background-image-url.jpg")
+
+    st.title("Welcome to Multiple Disease Prediction System")
+    st.write("Please select a prediction category from the sidebar.")
+
     
 # Diabetes Prediction Page
 if (selected == 'Diabetes Prediction'):
+    
+    set_bg_from_url("https://tse2.mm.bing.net/th?id=OIP.wM80j57qgm2VtlmQ85Z1ygHaFI&pid=Api&P=0&h=220.jpg")
     st.image("https://tse1.mm.bing.net/th?id=OIP.Lrm1VkIDRdtdIbn6Jio8dAHaE8&pid=Api&P=0&h=220.jpg", use_column_width=True)
     # page title
     st.subheader('Diabetes Prediction')
@@ -73,8 +95,8 @@ if (selected == 'Diabetes Prediction'):
         if (diab_prediction[0] == 1):
             st.image("https://en.pimg.jp/053/159/012/1/53159012.jpg",  width=300)
             diab_diagnosis = 'The person is diabetic'
-            st.markdown("[Your Guide2Diabetes](https://www.cdc.gov/diabetes/ndep/pdfs/4steps/4steps-english.pdf)", unsafe_allow_html=True)
             diab_diagnosis += "Proper management often involves a combination of medication, lifestyle changes, and regular monitoring of blood glucose levels to keep them within target ranges."
+            st.markdown("[Your Guide2Diabetes PDF](https://www.cdc.gov/diabetes/ndep/pdfs/4steps/4steps-english.pdf)", unsafe_allow_html=True)
         else:
             st.image("https://thumbs.dreamstime.com/b/negative-premium-soft-green-round-button-isolated-abstract-illustration-105963957.jpg",  width=300)
             diab_diagnosis = 'The person is not diabetic'
