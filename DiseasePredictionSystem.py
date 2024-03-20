@@ -25,10 +25,6 @@ with st.sidebar:
                           default_index=0)
     
 st.title("Multiple Disease Prediction System")
-if (selected == 'Multiple Disease Prediction'):
-    st.title("Welcome to Multiple Disease Prediction System")
-    st.write("Please select a prediction category from the sidebar.")
-    st.markdown("[Your Welcome PDF](https://example.com/welcome.pdf)", unsafe_allow_html=True)
 # Diabetes Prediction Page
 if (selected == 'Diabetes Prediction'):
     st.image("https://tse1.mm.bing.net/th?id=OIP.Lrm1VkIDRdtdIbn6Jio8dAHaE8&pid=Api&P=0&h=220.jpg", use_column_width=True)
@@ -83,6 +79,9 @@ if (selected == 'Diabetes Prediction'):
             diab_diagnosis = 'The person is not diabetic'
         
     st.success(diab_diagnosis)
+
+    if st.button('Reset'):
+        st.experimental_rerun()
 
 
 # Heart Disease Prediction Page
