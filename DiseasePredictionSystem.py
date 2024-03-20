@@ -28,7 +28,7 @@ st.title("Multiple Disease Prediction System")
     
 # Diabetes Prediction Page
 if (selected == 'Diabetes Prediction'):
-    
+    st.image("https://tse1.mm.bing.net/th?id=OIP.Lrm1VkIDRdtdIbn6Jio8dAHaE8&pid=Api&P=0&h=220.jpg", use_column_width=True)
     # page title
     st.subheader('Diabetes Prediction')
     
