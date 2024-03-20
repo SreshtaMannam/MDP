@@ -80,15 +80,9 @@ if (selected == 'Diabetes Prediction'):
         
     st.success(diab_diagnosis)
 
+    # reset button to clear input values
     if st.button('Reset'):
-        pregnancies = ''
-        glucose = ''
-        blood_pressure = ''
-        skin_thickness = ''
-        insulin = ''
-        bmi = ''
-        diabetes_pedigree_function = ''
-        age = ''
+        st.experimental_rerun()
 
 
 # Heart Disease Prediction Page
@@ -154,11 +148,15 @@ if selected == 'Heart Disease Prediction':
 
         if heart_prediction[0] == 1:
             heart_diagnosis = 'The person is having heart disease'
+            st.markdown("[Guide2Healthy Heart](https://www.cdc.gov/heartdisease/risk_factors.htm)", unsafe_allow_html=True)
         else:
             heart_diagnosis = 'The person does not have any heart disease'
+            st.markdown("[Prevention Tips](https://www.cdc.gov/heartdisease/prevention.htm)", unsafe_allow_html=True)
 
     st.success(heart_diagnosis)
-
+     # reset button to clear input values
+    if st.button('Reset'):
+        st.experimental_rerun()
     
     
 
