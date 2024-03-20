@@ -246,7 +246,6 @@ if (selected == "Parkinsons Prediction"):
         if (parkinsons_prediction[0] == 1):
           parkinsons_diagnosis = "The person has Parkinson's disease"
           st.markdown("[Disease Stages - Right-Care](https://www.healthgrades.com/right-care/parkinsons-disease/parkinsons-disease-stages)", unsafe_allow_html=True)
-          https://www.healthgrades.com/right-care/parkinsons-disease/parkinsons-disease-stages
         else:
           parkinsons_diagnosis = "The person does not have Parkinson's disease"
           
