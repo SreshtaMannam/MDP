@@ -79,6 +79,7 @@ if (selected == 'Diabetes Prediction'):
 
 # Heart Disease Prediction Page
 if selected == 'Heart Disease Prediction':
+    st.image("https://images.everydayhealth.com/images/digestive-health/crohns-disease/crohns-disease-how-does-it-affect-your-heart-1440x810.jpg?sfvrsn=d8a96d6d_0.jpg", use_column_width=True)
 
     # page title
     st.title('Heart Disease Prediction using ML')
@@ -149,7 +150,7 @@ if selected == 'Heart Disease Prediction':
 
 # Parkinson's Prediction Page
 if (selected == "Parkinsons Prediction"):
-    
+    st.image("https://escolaeducacao.com.br/wp-content/uploads/2019/04/doen%C3%A7a-de-parkinson.jpg", use_column_width=True)
     # page title
     st.subheader("Parkinson's Disease Prediction")
     
