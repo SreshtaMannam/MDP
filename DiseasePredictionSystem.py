@@ -81,7 +81,14 @@ if (selected == 'Diabetes Prediction'):
     st.success(diab_diagnosis)
 
     if st.button('Reset'):
-        st.experimental_rerun()
+        pregnancies = ''
+        glucose = ''
+        blood_pressure = ''
+        skin_thickness = ''
+        insulin = ''
+        bmi = ''
+        diabetes_pedigree_function = ''
+        age = ''
 
 
 # Heart Disease Prediction Page
