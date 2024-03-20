@@ -31,6 +31,9 @@ if (selected == 'Diabetes Prediction'):
     
     # page title
     st.subheader('Diabetes Prediction')
+   
+    image = Image.open('diabetes.jpg')
+    st.image(image, caption='diabetes disease prediction')
     
     
     # getting the input data from the user
