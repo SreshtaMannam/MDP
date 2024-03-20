@@ -73,6 +73,7 @@ if (selected == 'Diabetes Prediction'):
         if (diab_prediction[0] == 1):
             st.image("https://en.pimg.jp/053/159/012/1/53159012.jpg", use_column_width=True)
             diab_diagnosis = 'The person is diabetic'
+            diab_diagnosis += " Diabetes, a chronic condition characterized by elevated blood sugar levels, has no definitive cure. Treatment primarily focuses on managing blood sugar levels to prevent complications.Proper management often involves a combination of medication, lifestyle changes, and regular monitoring of blood glucose levels to keep them within target ranges."
         else:
             st.image("https://thumbs.dreamstime.com/b/negative-premium-soft-green-round-button-isolated-abstract-illustration-105963957.jpg", use_column_width=True)
             diab_diagnosis = 'The person is not diabetic'
