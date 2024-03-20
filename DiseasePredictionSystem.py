@@ -1,6 +1,5 @@
 import pickle
 import streamlit as st
-from PIL import Image
 from streamlit_option_menu import option_menu
 
 
@@ -32,9 +31,6 @@ if (selected == 'Diabetes Prediction'):
     
     # page title
     st.subheader('Diabetes Prediction')
-   
-    image = Image.open('diabetes.jpg')
-    st.image(image, caption='diabetes disease prediction')
     
     
     # getting the input data from the user
@@ -70,23 +66,16 @@ if (selected == 'Diabetes Prediction'):
     
     # creating a button for Prediction
     
-    # button
-    if st.button("Diabetes test result"):
-        diabetes_prediction=[[]]
-        diabetes_prediction = diabetes_model.predict(
-            [[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreefunction, Age]])
-
-        # after the prediction is done if the value in the list at index is 0 is 1 then the person is diabetic
-        if diabetes_prediction[0] == 1:
-            diabetes_dig = "we are really sorry to say but it seems like you are Diabetic."
-            image = Image.open('positive.jpg')
-            st.image(image, caption='')
-        else:
-            diabetes_dig = 'Congratulation,You are not diabetic'
-            image = Image.open('negative.jpg')
-            st.image(image, caption='')
-        st.success(name+' , ' + diabetes_dig)
+    if st.button('Diabetes Test Result'):
+        diab_prediction = diabetes_model.predict([[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]])
         
+        if (diab_prediction[0] == 1):
+          diab_diagnosis = 'The person is diabetic'
+        else:
+          diab_diagnosis = 'The person is not diabetic'
+        
+    st.success(diab_diagnosis)
+
 
 # Heart Disease Prediction Page
 if selected == 'Heart Disease Prediction':
@@ -284,7 +273,7 @@ def set_bg_from_url(url, opacity=1):
     )
 
 # Set background image from URL
-set_bg_from_url("https://images.everydayhealth.com/homepage/health-topics-2.jpg?w=768", opacity=0.875)
+set_bg_from_url("https://wallpapercave.com/wp/wp6938553.jpg?w=768", opacity=0.875)
     
     
     
