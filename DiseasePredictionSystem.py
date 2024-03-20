@@ -2,20 +2,6 @@ import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
 
-def set_bg_from_url(url, opacity=1):
-    # Set background image using HTML and CSS
-    st.markdown(
-        f"""
-        <style>
-            body {{
-                background: url('{https://intersectiq.com/assets/images/blogs/6/cover.jpg}') no-repeat center center fixed;
-                background-size: cover;
-                opacity: {opacity};
-            }}
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
 
 # loading the saved models
 
@@ -32,24 +18,19 @@ with st.sidebar:
     
     selected = option_menu('Multiple Disease Prediction System',
                           
-                          ['Home','Diabetes Prediction',
+                          ['Diabetes Prediction',
                            'Heart Disease Prediction',
                            'Parkinsons Prediction'],
-                          icons=['home','activity','heart','person'],
+                          icons=['activity','heart','person'],
                           default_index=0)
     
-# Set background image for home page
-if selected == 'Home':
-    set_bg_from_url("https://your-home-page-background-image-url.jpg")
-
+st.title("Multiple Disease Prediction System")
+if (selected == 'Multiple Disease Prediction'):
     st.title("Welcome to Multiple Disease Prediction System")
     st.write("Please select a prediction category from the sidebar.")
-
-    
+    st.markdown("[Your Welcome PDF](https://example.com/welcome.pdf)", unsafe_allow_html=True)
 # Diabetes Prediction Page
 if (selected == 'Diabetes Prediction'):
-    
-    set_bg_from_url("https://tse2.mm.bing.net/th?id=OIP.wM80j57qgm2VtlmQ85Z1ygHaFI&pid=Api&P=0&h=220.jpg")
     st.image("https://tse1.mm.bing.net/th?id=OIP.Lrm1VkIDRdtdIbn6Jio8dAHaE8&pid=Api&P=0&h=220.jpg", use_column_width=True)
     # page title
     st.subheader('Diabetes Prediction')
