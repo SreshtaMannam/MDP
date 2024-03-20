@@ -67,14 +67,15 @@ if (selected == 'Diabetes Prediction'):
     # creating a button for Prediction
     
     if st.button('Diabetes Test Result'):
+        
         diab_prediction = diabetes_model.predict([[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]])
         
         if (diab_prediction[0] == 1):
-          st.image("https://en.pimg.jp/053/159/012/1/53159012.jpg", use_column_width=True)
-          diab_diagnosis = 'The person is diabetic'
+            st.image("https://en.pimg.jp/053/159/012/1/53159012.jpg", use_column_width=True)
+            diab_diagnosis = 'The person is diabetic'
         else:
             st.image("https://thumbs.dreamstime.com/b/negative-premium-soft-green-round-button-isolated-abstract-illustration-105963957.jpg", use_column_width=True)
-          diab_diagnosis = 'The person is not diabetic'
+            diab_diagnosis = 'The person is not diabetic'
         
     st.success(diab_diagnosis)
 
